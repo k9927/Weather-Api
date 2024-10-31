@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.main-section {
+    background: rgba(255, 255, 255, 0.15); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    width: 320px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.app-title {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.cityInput {
+    padding: 10px;
+    padding-right: 35px; /* Space for search icon */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: whitesmoke;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: -15px;
+}
+
+.cityInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cityInput:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+.search-icon {
+    position: absolute;
+    right: 8px; /* Position the icon closer to the right edge */
+    bottom: 12px; /* Adjust based on input height to vertically align with text */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+
+.search-icon:hover {
+    opacity: 1;
+}
+
+.weather-icon {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.weather {
+    height: 80px;
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.weather:hover {
+    transform: scale(1.1);
+}
+
+.temperature-value p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.temperature-description p,
+.location p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: -10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
